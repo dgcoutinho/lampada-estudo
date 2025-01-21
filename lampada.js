@@ -1,6 +1,5 @@
 // Selecionando os elementos corretamente
-const turnOn = document.getElementById('turnOn'); // Corrigido: getElementByID -> getElementById
-const turnOff = document.getElementById('turnOff');
+const turnOnOff = document.getElementById('turnOnOff'); // Corrigido: getElementByID -> getElementById
 const lamp = document.getElementById('lamp');
 
 //Função para verificar se está quebrada
@@ -29,9 +28,22 @@ function lampBroken() {
 
 }
 
+function lampOnOff() {
+    if (turnOnOff.textContent == 'Ligar'){
+        lampOn();
+        turnOnOff.textContent = 'Desligar'
+    }else{
+        lampOff();
+        turnOnOff.textContent = 'Ligar';
+    }
+}
+
+
+
+
+
 // Adicionando os eventos aos botões
-turnOn.addEventListener('click', lampOn);
-turnOff.addEventListener('click', lampOff);
+turnOnOff.addEventListener('click', lampOnOff);
 lamp.addEventListener ( 'mouseover', lampOn);
 lamp.addEventListener ('mouseleave', lampOff);
 lamp.addEventListener ('dblclick', lampBroken);

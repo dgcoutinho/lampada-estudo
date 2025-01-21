@@ -1,3 +1,2 @@
-# Lâmpada JS
-
-Projeto em javascript para iniciar a interação com elementos HTML.
+# lampada-estudo
+Iniciando estudos de javascript com o professor Fernando Leonid
